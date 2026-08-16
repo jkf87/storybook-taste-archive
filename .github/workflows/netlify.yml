@@ -1,0 +1,31 @@
+name: Deploy Storybook to Netlify
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: netlify-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm test -- --run
+      - run: npm run build:storybook
+      - name: Deploy production site
+        run: npx --yes netlify-cli@27.0.1 deploy --prod --dir=storybook-static --site "$NETLIFY_SITE_ID" --auth "$NETLIFY_AUTH_TOKEN"
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}

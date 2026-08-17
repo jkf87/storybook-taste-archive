@@ -18,7 +18,7 @@ const meta = {
   component: ArchiveButton,
   args: { label: 'Add reference', variant: 'primary', disabled: false },
   argTypes: { variant: { control: 'inline-radio', options: ['primary', 'quiet'] } },
-  decorators: [(Story) => <div style={{ width: 360, padding: 32, background: '#1746d1', borderRadius: 22 }}><Story /></div>],
+  decorators: [(Story) => <div style={{ width: 360, padding: 32, background: 'var(--color-cobalt)', borderRadius: 22 }}><Story /></div>],
 } satisfies Meta<typeof ArchiveButton>
 
 export default meta

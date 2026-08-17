@@ -97,10 +97,19 @@ All intentional spacing is based on 4px.
 
 ### SourceCard
 
-- Structure: original SVG preview, title, origin/license metadata, evidence tags.
-- States: default, hover, focus, selected.
+- Structure: preview, title, origin/license metadata, evidence tags, and user-owned management actions when applicable.
+- States: default, hover, focus, selected, user-owned, edit-ready.
 - Accessibility: real button, `aria-pressed`, explicit license text, descriptive preview alt text.
 - Stress: long title and long origin URL wrap without hiding provenance.
+
+### SourceComposer
+
+- Structure: heading/status -> title and source URL -> image picker -> note and tags -> rule connections -> save/cancel actions.
+- Variants: create and edit, with existing values prefilled in edit mode.
+- States: closed, open, file selected, validation error, saving, saved.
+- Accessibility: persistent labels, field-level error text, keyboard-first DOM order, status announcement after create/update/delete.
+- Storage: user-owned sources and working-set membership persist in browser `localStorage`; malformed stored data is discarded at the storage boundary.
+- Interaction reference: adapts beui.dev `file-upload` queue feedback and `input` error/success state transitions using the existing `--motion-micro` and `--motion-standard` tokens, without adding a motion runtime.
 
 ### MoodboardCanvas
 
@@ -147,6 +156,8 @@ All intentional spacing is based on 4px.
 
 - Animate only transform and opacity; selection also uses immediate color/outline changes for clarity.
 - Selecting a SourceCard highlights related moodboard tiles, rules, and components. The motion explains causality.
+- Opening the SourceComposer reveals it inline above the grid so focus and scroll ownership remain in the document; create/edit changes cross-fade through existing color/opacity transitions.
+- File selection reports filename and size immediately. Submit feedback changes label/status rather than playing decorative motion.
 - Reduced motion disables entrance translation and keeps instant semantic state changes.
 - Hover never carries unique information; click, focus, and keyboard interactions provide the full path.
 

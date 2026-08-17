@@ -12,6 +12,7 @@ dist
 dist-ssr
 storybook-static
 .netlify
+.omo/evidence/
 *.local
 
 # Editor directories and files

@@ -1,24 +1,45 @@
 :root {
   font-family: 'Manrope', sans-serif;
-  color: #16191f;
-  background: #f5f0e5;
+  color: var(--ink);
+  background: var(--cream);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  --cream: #f5f0e5;
-  --paper: #fffaf0;
-  --ink: #16191f;
-  --muted: #6e6b65;
-  --line: #cfc7b8;
-  --cobalt: #1746d1;
-  --cobalt-dark: #0b2e9f;
+  --color-canvas: #f4efe4;
+  --color-paper: #fffdf8;
+  --color-paper-cool: #edf2ff;
+  --color-paper-warm: #e8dfcf;
+  --color-ink: #17191f;
+  --color-ink-muted: #62646b;
+  --color-cobalt: #0b3fd8;
+  --color-cobalt-hover: #245be7;
+  --color-cobalt-dark: #062a9a;
+  --color-cobalt-mist: #dbe6ff;
+  --color-hairline: #d5cdbc;
+  --color-error: #a8282b;
+  --cream: var(--color-canvas);
+  --paper: var(--color-paper);
+  --ink: var(--color-ink);
+  --muted: var(--color-ink-muted);
+  --line: var(--color-hairline);
+  --cobalt: var(--color-cobalt);
+  --cobalt-dark: var(--color-cobalt-dark);
+  --error: var(--color-error);
+  --cobalt-wash: var(--color-cobalt-mist);
+  --shadow-panel: 0 2px 4px rgb(23 25 31 / 0.05), 0 22px 56px rgb(23 25 31 / 0.08);
+  --radius-control: 14px;
+  --radius-card: 22px;
+  --radius-panel: 32px;
+  --motion-micro: 140ms;
+  --motion-standard: 260ms;
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: auto; }
 body { margin: 0; min-width: 320px; min-height: 100vh; }
-button, input { font: inherit; }
+button, input, textarea { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
-button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid #e05235; outline-offset: 3px; }
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid var(--cobalt); outline-offset: 3px; }
 a { color: inherit; }
+small { font-size: 14px; }
 img { display: block; max-width: 100%; }
 ::selection { color: var(--paper); background: var(--cobalt); }

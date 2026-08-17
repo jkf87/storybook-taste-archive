@@ -2,7 +2,7 @@
 
 ## Current Objective
 
-Build and publicly deploy a React/Vite Storybook that teaches the full Source -> Moodboard -> Rule -> Component workflow.
+Extend the deployed React/Vite Storybook into a browser-persistent personal reference archive while preserving the Source -> Moodboard -> Rule -> Component workflow.
 
 ## Locked Decisions
 
@@ -28,6 +28,7 @@ The interface is a quiet curator's worktable. It must explain provenance, not me
 - Visual maker: needs a clear, learnable evidence chain and tangible examples.
 - Keyboard/screen-reader maker: needs all selection and provenance relations exposed semantically without relying on connectors, hover, or color.
 - Motion-sensitive maker: needs identical understanding with reduced motion enabled.
+- Returning maker: needs personally added sources, tags, edits, deletions, and working-set state to survive a reload on the same browser.
 
 ## Adaptive Preferences
 
@@ -39,6 +40,7 @@ The interface is a quiet curator's worktable. It must explain provenance, not me
 - Typecheck, unit/integration tests, app build, Storybook build.
 - Real-browser Storybook Canvas/Controls/Docs at 375px, 768px, and 1280px.
 - Keyboard focus and source-selection provenance scenario.
+- Create, edit, delete, file-preview, malformed-storage recovery, and same-browser persistence scenarios.
 - Visual QA dual reviewer on fresh screenshots.
 - Deployed URL smoke test, GitHub repository visibility, and Netlify main-branch deployment link.
 

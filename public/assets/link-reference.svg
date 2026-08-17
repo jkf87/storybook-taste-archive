@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title description">
+  <title id="title">Linked reference placeholder</title>
+  <desc id="description">A cobalt link symbol on warm cream paper indicating a reference saved from a URL without an uploaded preview image.</desc>
+  <rect width="800" height="600" rx="40" fill="#fffdf8"/>
+  <rect x="40" y="40" width="720" height="520" rx="30" fill="#edf2ff" stroke="#0b3fd8" stroke-width="4" stroke-dasharray="14 14"/>
+  <g fill="none" stroke="#0b3fd8" stroke-width="34" stroke-linecap="round">
+    <path d="M354 350l-43 43c-50 50-131-31-81-81l92-92c38-38 101-7 96 39"/>
+    <path d="M446 250l43-43c50-50 131 31 81 81l-92 92c-38 38-101 7-96-39"/>
+    <path d="M332 332l136-136"/>
+  </g>
+  <text x="400" y="505" fill="#0b3fd8" font-family="system-ui, sans-serif" font-size="28" font-weight="700" letter-spacing="7" text-anchor="middle">LINKED REFERENCE</text>
+</svg>
